@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+  <script src="http://www.skulpt.org/static/skulpt.min.js" type="text/javascript"></script>
+  <script src="http://www.skulpt.org/static/skulpt-stdlib.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+  <script type="text/javascript">
+  // output functions are configurable.  This one just appends some text
+  // to a pre element.
+  function outf(text) {
+      var mypre = document.getElementById("output");
+      mypre.innerHTML = mypre.innerHTML + text;
+  }
+  function builtinRead(x) {
+      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+              throw "File not found: '" + x + "'";
+      return Sk.builtinFiles["files"][x];
+  }
+  function sleepFor( sleepDuration ){
+      var now = new Date().getTime();
+      while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
+  }
+  // Here's everything you need to run a python program in skulpt
+  // grab the code from your textarea
+  // get a reference to your pre element for output
+  // configure the output function
+  // call Sk.importMainWithBody()
+  function runit() {
+     var prog = document.getElementById("yourcode").value;
+     var mypre = document.getElementById("output");
+     mypre.innerHTML = '';
+     Sk.pre = "output";
+     Sk.configure({output:outf, read:builtinRead});
+     (Sk.TurtleGraphics || (Sk.TurtleGraphics = {})).target = 'mycanvas';
+     var myPromise = Sk.misceval.asyncToPromise(function() {
+         return Sk.importMainWithBody("<stdin>", false, prog, true);
+     });
+     myPromise.then(function(mod) {
+         $('#msg').text('You got that right, lets move on');
+         sleepFor(1);
+         state='true';
+         player.playVideo();
+         $('.btn-help').prop('disabled', true);
+     },
+         function(err) {
+           $('#msg').text('hmmm, humans can make errors. Something is missing');
+           state='false';
+
+           sleepFor(3);
+     });
+  }
+  </script>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+          <div class="embed-responsive embed-responsive-4by3">
+          <div id="video-placeholder"></div>
+          </div>
+        </div>
+        <div class="col-sm-offset-0 col-sm-6">
+          <div class="panel panel-default">
+  <div class="panel-heading">Slides</div>
+  <div class="panel-body">
+    Content
+    <div id="slides"><img class="img-responsive" src="images/1.jpg"> </div>
+  </div>
+</div>
+    </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="form-group">
+        <h5><span id="msg">Intro to python</span></h5>
+        <textarea class="form-control" rows="5" id="yourcode" cols="40" rows="10">count = 0
+while(count < 4):
+print ('count is',count)
+count = count + 1</textarea>
+        <button type="button" class="btn btn-default btn-help" onclick="runit()"><i class="fa fa-play"></i></button>
+
+        <button type="button" class="btn btn-default btn-help" id="help" aria-label="Left Align"><i class="fa fa-question"></i></button>
+      </div>
+      </div>
+       <div class="col-sm-6">
+         <h5>Result</h5>
+         <pre id="output" ></pre>
+       </div>
+    </div>
+</div>
+
+<div id="controls">
+  <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+</div>
+<script>
+$("#help").click(function (e)
+{
+window.alert("You just heard something about Intendation");
+});
+</script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="script.js"></script>
+</body>
+</html>
