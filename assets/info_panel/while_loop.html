@@ -1,0 +1,203 @@
+<div class="container container-main">
+
+  <div id="notebook">
+    <div id="notebook-container">
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="While-Loops">While Loops<a class="anchor-link" href="#While-Loops"></a></h1><h2 id="Basics">Basics<a class="anchor-link" href="#Basics"></a></h2><p>One of the most powerful aspects of computer programs is their ability to
+perform repetion, which is the ability to do something many times.
+The simplest form of repetition is the <em>while loop</em>, which does something
+as long as some condition is true.</p>
+<p>For example, here is a small program that prints out the numbers 3, 2, and 1 using a while loop.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_moons</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">num_moons</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">num_moons</span>
+    <span class="n">num_moons</span> <span class="o">=</span> <span class="n">num_moons</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>3
+2
+1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The loop opens with the keyword <code>while</code>, followed by the loop’s controlling test.
+Since this test is true, i.e., num_moons is greater than 0 to start, Python
+executes the statements in the loop body, which is the set of indented statements
+under the loop control. This prints out <code>3</code> and subtracts 1 from <code>num_moons</code>.
+Python then re-checks the condition. It’s still true so the program prints ’2′ and
+subtracts 1 from num_moons again. Another check, another print statement:
+the program prints ’1′, then decrements num_moons again.
+Since the loop’s controlling condition is now false, the program is done.</p>
+<p>We can see that this is the case by looking at the current value of num_moons.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">num_moons</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="While-loops-don't-always-execute">While loops don't always execute<a class="anchor-link" href="#While-loops-don't-always-execute"></a></h2><p>A while loop may execute any number of times, including zero. If instead of starting
+at 3, <code>num_moons</code> starts at -3, the loop condition is false the first time it is tested
+and the loop body doesn't execute at all.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="s1">'start'</span>
+<span class="n">num_moons</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<span class="k">while</span> <span class="n">num_moons</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">num_moons</span>
+    <span class="n">num_moons</span> <span class="o">=</span> <span class="n">num_moons</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="nb">print</span> <span class="s1">'end'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>start
+end
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see that the code has been run, because it prints out the words 'start' and 'end',
+but nothing else is printed because the loop did not execute.
+It is important to keep this “zero pass” condition in mind when designing and testing code.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Infinite-loops">Infinite loops<a class="anchor-link" href="#Infinite-loops"></a></h2><p>A while loop may also execute indefinitely.
+Here’s another copy of the program that doesn’t subtract 1 from num_moons inside the loop body.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span> <span class="s1">'start'</span>
+<span class="n">num_moons</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">num_moons</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="nb">print</span> <span class="n">num_moons</span>
+<span class="nb">print</span> <span class="s1">'end'</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>If we executed this program (not recommended) it would first the word 'start',
+then it would print out the number 3, then another 3, and it would keep printing 3's
+until it was interupted.
+Since the loop’s control condition was true when the loop started, and nothing happens
+inside the loop to change it, the loop will run until the user gets bored enough to halt it.
+This is usually not the desired behavior, but there are cases where an apparently infinite loop
+can be useful.</p>
+
+</div>
+</div>
+</div>
+    </div>
+  </div>
+
+</div>
