@@ -101,7 +101,7 @@
             </div>
             <div class="embed-responsive embed-responsive-16by9">
               <div id="editor"></div>
-              <pre id="output" display="none"></pre>
+              <pre id="output" style="display:none"></pre>
             </div>
           </div>
         </div>
@@ -188,6 +188,7 @@
           eval(Sk.importMainWithBody("<stdin>",false,prog));
           state='true';
           $('#editor').hide();
+          $('#output').show();
           player.playVideo();
        } catch(e) {
           alert(e.toString())
@@ -197,6 +198,7 @@
     }
     function showEditor(){
       $('#editor').show();
+      $('#output').hide();
     }
   </script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
