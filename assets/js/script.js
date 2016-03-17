@@ -46,7 +46,7 @@ data = '[{"time" : "0", "end" : "14", "datafor" : "Intro to Python: Loops", "sli
 
 var someData_notJSON = JSON.parse(data);
 // This function is called by initialize()
-state='true'
+state='true';
 function updateTimerDisplay(){
     // Update current time text display.
     if (state == 'true'){

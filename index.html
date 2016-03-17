@@ -85,7 +85,7 @@
               <h3 class="panel-title">Video</h3>
             </div>
             <div class="embed-responsive embed-responsive-16by9">
-              <div id="video-placeholder"></div>
+              <div id="video-placeholder" class="embed-responsive-item"></div>
             </div>
           </div>
         </div>
@@ -100,8 +100,8 @@
               </div>
             </div>
             <div class="embed-responsive embed-responsive-16by9">
-              <div id="editor"></div>
-              <pre id="output" style="display:none"></pre>
+              <div id="editor" class="embed-responsive-item"></div>
+              <pre id="output" style="display:none" class="embed-responsive-item"></pre>
             </div>
           </div>
         </div>
@@ -189,7 +189,7 @@
           state='true';
           $('#editor').hide();
           $('#output').show();
-          player.playVideo();
+          //player.playVideo();
        } catch(e) {
           alert(e.toString())
           state='false';
