@@ -10,7 +10,6 @@
   <title>Python 3 - Crowd Course - Stanford Engineering</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/codemirror.css">
   <link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
   <link rel="stylesheet" href="assets/css/bootcards-demo-app.css">
   <link rel="stylesheet" href="assets/css/main.css">
@@ -137,8 +136,10 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="http://www.skulpt.org/static/skulpt.min.js"></script>
   <script src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
-  <script src="assets/js/src-noconflict/ace.js" charset="utf-8"></script>
+  <!-- <script src="assets/js/src-noconflict/ace.js" charset="utf-8"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
   <script>
+    Sk.python3 = true; // set python 3's syntax
     //Initializing ace editor
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
