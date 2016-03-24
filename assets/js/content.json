@@ -1,17 +1,96 @@
 {
     "title": "Python 3 - Crowd Course",
-    "modules": [{
+    "navigation": [{
         "name": "Introduction",
-        "videoId": "LNk3gdXkxFg",
-        "timerData": [
-        	{ "time": "0", "end": "14", "datafor": "Intro to Python: Loops", "slidedata": "images/1.jpg", "pause": "false" },
-        	{ "time": "14", "end": "60", "datafor": "What is a loop", "slidedata": "images/2.jpg", "pause": "false" },
-        	{ "time": "60", "end": "91", "datafor": "While loops", "slidedata": "images/3.jpg", "pause": "false" },
-        	{ "time": "104", "end": "106", "datafor": "#Hello friends, This is ashukat. Today, we are going to write\\n#a simple while loop\\ncount = 0\\nwhile (count < 9):\\n\\tprint count\\n\\tcount = count + 1\\n#now execute the code", "slidedata": "images/4.jpg", "pause": "true" },
-        	{ "time": "107", "end": "158", "datafor": "Infinite loops", "slidedata": "images/4.jpg", "pause": "false" },
-        	{ "time": "158", "end": "242", "datafor": "Iterables", "slidedata": "images/5.jpg", "pause": "false" },
-        	{ "time": "242", "end": "277", "datafor": "For loops", "slidedata": "images/6.jpg", "pause": "false" },
-        	{ "time": "277", "end": "321", "datafor": "Nesting", "slidedata": "images/7.jpg", "pause": "false" }
-        ]
-    }]
+        "children": [{
+            "name": "Why Python?",
+            "module" : "1"
+        },{
+            "name": "Setup",
+            "module" : "2"
+        },{
+            "name": "Instructions",
+            "module" : "3"
+        }]
+    },{
+        "name": "Basics",
+        "children": [{
+            "name": "Numbers, Operators and Operations",
+            "module" : "4"
+        },{
+            "name": "Input and Output Operations",
+            "module" : "5"
+        },{
+            "name": "Strings",
+            "module" : "6"
+        },{
+        	"name": "Lists",
+        	"module": "7"
+        }]
+    },{
+        "name": "Intermediate",
+        "children": [{
+            "name": "Control flow tools",
+            "module" : "8"
+        },{
+            "name": "Functions",
+            "module" : "9"
+        },{
+            "name": "Datastructures",
+            "module" : "10"
+        },{
+        	"name": "Classes",
+        	"module": "11"
+        },{
+        	"name": "Recursion",
+        	"module": "12"
+        },{
+        	"name": "Debugging",
+        	"module": "13"
+        },{
+        	"name": "Assertions and Exemptions",
+        	"module": "14"
+        },{
+        	"name": "Efficiency and Orders of Growth - Time",
+        	"module": "15"
+        },{
+        	"name": "Simple Algorithms",
+        	"module": "16"
+        }]
+    },{
+        "name": "Advanced",
+        "children": [{
+            "name": "Modules",
+            "module" : "17"
+        },{
+            "name": "File IO",
+            "module" : "18"
+        },{
+            "name": "Error and Exceptions",
+            "module" : "19"
+        },{
+        	"name": "Memory and search",
+        	"module": "20"
+        },{
+        	"name": "Multithreading",
+        	"module": "20"
+        },{
+        	"name": "Network and Sockets",
+        	"module": "20"
+        }]
+    }],
+    "modules": {
+        "1": {
+            "name": "Why Python ?",
+            "videoId": "LNk3gdXkxFg",
+            "timerData": [
+            ]
+        },
+        "2": {
+            "name": "Second",
+            "videoId": "LNk3gdXkxFg",
+            "timerData": [
+            ]
+        }
+    }
 }
