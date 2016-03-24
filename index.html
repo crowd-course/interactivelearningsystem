@@ -1,144 +1,180 @@
 <!-- Crowd Course Python interactive learning. -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <meta name="mobile-web-app-capable" content="yes">
-  <link rel="icon" href="assets/images/favicon.ico">
-  <title>Python 3 - Crowd Course - Stanford Engineering</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
-  <link rel="stylesheet" href="assets/css/bootcards-demo-app.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <title>Python 3 - Crowd Course - Stanford Engineering</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
+    <link rel="stylesheet" href="assets/css/bootcards-demo-app.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+    .dropdown-menu {
+        top: 65% !important;
+    }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
+
 <body id="bootcards">
-  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <button type="button" class="btn btn-default btn-back navbar-left pull-left hidden" onclick="history.back()">
-        <i class="fa fa-lg fa-chevron-left"></i><span>Back</span>
-      </button>
-      <button type="button" class="btn btn-default btn-menu navbar-left pull-left offCanvasToggle" data-toggle="offcanvas">
-        <i class="fa fa-lg fa-bars"></i><span>Menu</span>
-      </button>
-
-      <a class="navbar-brand no-break-out" title="Python 3 - Crowd Course" href="#">Python 3 - Crowd Course</a>
-      <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#" data-pjax="#main" data-title="Home"><i class="fa fa-home"></i> Home</a></li>
-          <li><a href="#" data-pjax="#main" data-title="Syllabus"><i class="fa fa-book"></i> Syllabus</a></li>
-          <li><a href="#" data-pjax="#main" data-title="Contact"><i class="fa fa-users"></i> Contact</a></li>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <button type="button" class="btn btn-default btn-back navbar-left pull-left hidden" onclick="history.back()">
+                <i class="fa fa-lg fa-chevron-left"></i><span>Back</span>
+            </button>
+            <button type="button" class="btn btn-default btn-menu navbar-left pull-left offCanvasToggle" data-toggle="offcanvas">
+                <i class="fa fa-lg fa-bars"></i><span>Menu</span>
+            </button>
+            <a class="navbar-brand no-break-out" title="Python 3 - Crowd Course" href="#">Python 3 - Crowd Course</a>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#" data-pjax="#main" data-title="Home"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#" data-pjax="#main" data-title="Syllabus"><i class="fa fa-book"></i> Syllabus</a></li>
+                    <li><a href="#" data-pjax="#main" data-title="Contact"><i class="fa fa-users"></i> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav id="offCanvasMenu" class="navmenu offcanvas offcanvas-left">
+        <ul class="nav">
+            <li class="active"><a href="#" data-pjax="#main" data-title="Home"><i class="fa fa-lg fa-home"></i> Home</a></li>
+            <li><a href="#" data-pjax="#main" data-title="Syllabus"><i class="fa fa-lg fa-book"></i> Syllabus</a></li>
+            <li><a href="#" data-pjax="#main" data-title="Contact"><i class="fa fa-lg fa-users"></i> Contact</a></li>
         </ul>
-      </div>
-    </div>
-  </div>
-
-  <nav id="offCanvasMenu" class="navmenu offcanvas offcanvas-left">
-    <ul class="nav">
-      <li class="active"><a href="#" data-pjax="#main" data-title="Home"><i class="fa fa-lg fa-home"></i> Home</a></li>
-      <li><a href="#" data-pjax="#main" data-title="Syllabus"><i class="fa fa-lg fa-book"></i> Syllabus</a></li>
-      <li><a href="#" data-pjax="#main" data-title="Contact"><i class="fa fa-lg fa-users"></i> Contact</a></li>
-    </ul>
-    <div style="margin-top:20px; padding-left: 20px; font-size: 12px; color: #777">v1.0</div>
-  </nav>
-
-  <div class="container bootcards-container" id="main">
-    <div class="row">
-      <div class="col-sm-12">
-        <nav>
-          <ul class="pagination">
-            <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-            <li><a href="#">Intro to Python</a></li>
-            <li><a href="#">Data types</a></li>
-            <li><a href="#">Loops</a></li>
-            <li><a href="#">Functions</a></li>
-            <li><a href="#">Lists</a></li>
-            <li><a href="#">Classes</a></li>
-            <li><a href="#">File I/O</a></li>
-            <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-    <div class="row">
-      <div class="bootcards-cards">
-        <div class="col-sm-6">
-          <div class="panel panel-default bootcards-chart">
-            <div class="panel-heading">
-              <h3 class="panel-title">Video</h3>
+        <div style="margin-top:20px; padding-left: 20px; font-size: 12px; color: #777">v1.0</div>
+    </nav>
+    <div class="container bootcards-container" id="main">
+        <div class="row">
+            <div class="col-sm-12">
+                <nav>
+                    <ul class="pagination">
+                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Introduction</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Why Python ?</a></li>
+                                <li><a href="#">Setup</a></li>
+                                <li><a href="#">Intructions</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Basics</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Numbers, Operators and Operations</a></li>
+                                <li><a href="#">Input and Output Operations</a></li>
+                                <li><a href="#">Strings</a></li>
+                                <li><a href="#">Lists</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Intermediate</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Control flow tools</a></li>
+                                <li><a href="#">Functions</a></li>
+                                <li><a href="#">Datastructures</a></li>
+                                <li><a href="#">Classes</a></li>
+                                <li><a href="#">Recursion</a></li>
+                                <li><a href="#">Debugging</a></li>
+                                <li><a href="#">Assertions and Exemptions</a></li>
+                                <li><a href="#">Efficiency and Orders of Growth - Time</a></li>
+                                <li><a href="#">Simple Algorithms</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Advanced</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Modules</a></li>
+                                <li><a href="#">File IO</a></li>
+                                <li><a href="#">Error and Exceptions</a></li>
+                                <li><a href="#">Memory and search</a></li>
+                                <li><a href="#">Multithreading</a></li>
+                                <li><a href="#">Network and Sockets</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </nav>
             </div>
-            <div class="embed-responsive embed-responsive-16by9">
-              <div id="video-placeholder" class="embed-responsive-item"></div>
-            </div>
-          </div>
         </div>
-
-        <div class="col-sm-6">
-          <div class="panel panel-default bootcards-chart">
-            <div class="panel-heading">
-              <div class="btn-group" role="group" aria-label="...">
-                <button type="button" onclick="runIt()" class="btn btn-default"><i class="fa fa-play"></i></button>
-                <button type="button" onclick="showEditor()" class="btn btn-default"><i class="fa fa-pencil-square-o"></i></button>
-                <button type="button" class="btn btn-default"><i class="fa fa-question-circle"></i></button>
-              </div>
+        <div class="row">
+            <div class="bootcards-cards">
+                <div class="col-sm-6">
+                    <div class="panel panel-default bootcards-chart">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Video</h3>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div id="video-placeholder" class="embed-responsive-item"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel panel-default bootcards-chart">
+                        <div class="panel-heading">
+                            <div class="btn-group" role="group" aria-label="...">
+                                <button type="button" onclick="runIt()" class="btn btn-default"><i class="fa fa-play"></i></button>
+                                <button type="button" onclick="showEditor()" class="btn btn-default"><i class="fa fa-pencil-square-o"></i></button>
+                                <button type="button" class="btn btn-default"><i class="fa fa-question-circle"></i></button>
+                            </div>
+                        </div>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div id="editor" class="embed-responsive-item"></div>
+                            <pre id="output" style="display:none" class="embed-responsive-item"></pre>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="embed-responsive embed-responsive-16by9">
-              <div id="editor" class="embed-responsive-item"></div>
-              <pre id="output" style="display:none" class="embed-responsive-item"></pre>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="panel panel-default bootcards-chart">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Info board</h3>
+                    </div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe src="assets/info_panel/while_loop.html"></iframe>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="panel panel-default bootcards-chart">
-          <div class="panel-heading">
-            <h3 class="panel-title">Info board</h3>
-          </div>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe src="assets/info_panel/while_loop.html"></iframe>
-          </div>
+    <span id="current-time">0:00</span> / <span id="duration">0:00</span>
+    <div class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container">
+            <div class="bootcards-desktop-footer clearfix">
+                <a href="https://msande.stanford.edu/" target="_blank"><img src="http://crowdcourse.stanford.edu/images/MS&E-web.png" alt="UCSC" height="50" align="left"></a>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-
-  <span id="current-time">0:00</span> / <span id="duration">0:00</span>
-
-  <div class="navbar navbar-default navbar-fixed-bottom">
-    <div class="container">
-      <div class="bootcards-desktop-footer clearfix">
-        <a href="https://msande.stanford.edu/" target="_blank"><img src="http://crowdcourse.stanford.edu/images/MS&E-web.png" alt="UCSC" height="50" align="left"></a>
-      </div>
-    </div>
-  </div>
-
-  <script>var isDesktop = true;</script>
-  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script src="http://www.skulpt.org/static/skulpt.min.js"></script>
-  <script src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
-  <!-- <script src="assets/js/src-noconflict/ace.js" charset="utf-8"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
-  <script>
+    <script>
+    var isDesktop = true;
+    </script>
+    <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://www.skulpt.org/static/skulpt.min.js"></script>
+    <script src="http://www.skulpt.org/static/skulpt-stdlib.js"></script>
+    <!-- <script src="assets/js/src-noconflict/ace.js" charset="utf-8"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.3/ace.js"></script>
+    <script>
     Sk.python3 = true; // set python 3's syntax
     //Initializing ace editor
     var editor = ace.edit("editor");
@@ -147,30 +183,35 @@
     var session = editor.session;
     //Initializing typing function
     function say(str) {
-      (function iterator(index) {
-        if (index < str.length) {
-          session.insert({row: session.getLength(),column: 0}, str.charAt(index));
-          setTimeout(function () {
-            iterator(++index);
-          }, 0);
-        }
-      })(0);
+        (function iterator(index) {
+            if (index < str.length) {
+                session.insert({
+                    row: session.getLength(),
+                    column: 0
+                }, str.charAt(index));
+                setTimeout(function() {
+                    iterator(++index);
+                }, 0);
+            }
+        })(0);
     }
 
     // output functions are configurable.  This one just appends some text
     // to a pre element.
     function outf(text) {
-      var mypre = document.getElementById("output");
-      mypre.innerHTML = mypre.innerHTML + text;
+        var mypre = document.getElementById("output");
+        mypre.innerHTML = mypre.innerHTML + text;
     }
+
     function builtinRead(x) {
-      if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
-              throw "File not found: '" + x + "'";
-      return Sk.builtinFiles["files"][x];
+        if (Sk.builtinFiles === undefined || Sk.builtinFiles["files"][x] === undefined)
+            throw "File not found: '" + x + "'";
+        return Sk.builtinFiles["files"][x];
     }
-    function sleepFor( sleepDuration ){
-      var now = new Date().getTime();
-      while(new Date().getTime() < now + sleepDuration){ /* do nothing */ }
+
+    function sleepFor(sleepDuration) {
+        var now = new Date().getTime();
+        while (new Date().getTime() < now + sleepDuration) { /* do nothing */ }
     }
     // Here's everything you need to run a python program in skulpt
     // grab the code from your textarea
@@ -178,32 +219,37 @@
     // configure the output function
     // call Sk.importMainWithBody()
     function runIt() {
-       var prog = editor.getValue();
-       var mypre = document.getElementById("output");
-       mypre.innerHTML = '';
-       Sk.canvas = "mycanvas";
-       Sk.pre = "output";
-       Sk.configure({output:outf, read:builtinRead});
-       try {
-          sleepFor(1);
-          eval(Sk.importMainWithBody("<stdin>",false,prog));
-          state='true';
-          $('#editor').hide();
-          $('#output').show();
-          //player.playVideo();
-       } catch(e) {
-          alert(e.toString())
-          state='false';
-          //player.pauseVideo();
-       }
+        var prog = editor.getValue();
+        var mypre = document.getElementById("output");
+        mypre.innerHTML = '';
+        Sk.canvas = "mycanvas";
+        Sk.pre = "output";
+        Sk.configure({
+            output: outf,
+            read: builtinRead
+        });
+        try {
+            sleepFor(1);
+            eval(Sk.importMainWithBody("<stdin>", false, prog));
+            state = 'true';
+            $('#editor').hide();
+            $('#output').show();
+            //player.playVideo();
+        } catch (e) {
+            alert(e.toString())
+            state = 'false';
+            //player.pauseVideo();
+        }
     }
-    function showEditor(){
-      $('#editor').show();
-      $('#output').hide();
+
+    function showEditor() {
+        $('#editor').show();
+        $('#output').hide();
     }
-  </script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
-  <script src="https://www.youtube.com/iframe_api"></script>
-  <script src="assets/js/script.js"></script>
+    </script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="assets/js/script.js"></script>
 </body>
+
 </html>
