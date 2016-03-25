@@ -30,10 +30,9 @@ function onYouTubeIframeAPIReady() {
                     </a></div><div id="faq-cat-1-sub-' + i + '" class="panel-collapse collapse"><div class="panel-body"><div class="list-group">';
             for (j in mod.children) {
                 var ch = mod.children[j];
-                //console.log(ch.module == "1");
-                html += '<a href="#" class="list-group-item' + ((i == 1 && ch.module == "1") ? ' active' : '') + '"><h4 class="list-group-item-heading">' + ch.name + '</h4>';
-                if (ch.desc !== undefined) {
-                    html += '<p class="list-group-item-text">' + ch.desc  + '</p>';
+                html += '<a href="#" class="list-group-item' + ((i == 1 && ch.module == "1") ? ' active' : '') + '"><h4 module="' + ch.module + '" class="list-group-item-heading">' + ch.name + '</h4>';
+                if (ch.desc) {
+                    html += '<p class="list-group-item-text">' + ch.desc + '</p>';
                 }
                 html += '</a>';
             }
@@ -53,11 +52,11 @@ function onYouTubeIframeAPIReady() {
         var firstModule = data.modules["1"];
         loadModule(firstModule);
 
-        $('nav ul.pagination li a.module').click(function(elem) {
+        $("#accordion-cat-1 h4.list-group-item-heading").click(function(elem) {
             var module = $(elem.target).attr('module');
-            if (!(module in data.modules)){
-            	alert('Module Not Implemented yet.');
-            	return
+            if (!(module in data.modules)) {
+                alert('Module Not Implemented yet.');
+                return
             }
             loadModule(data.modules[module])
         });
