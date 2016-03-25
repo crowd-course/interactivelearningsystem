@@ -32,7 +32,7 @@ var loadContentBody = function(videoId, timerContent) {
         // the elapsed part of the progress bar every second.
         time_update_interval = setInterval(function() {
             updateTimerDisplay();
-        }, 1000);
+        }, 500);
 
 
         $('#volume-input').val(Math.round(player.getVolume()));
@@ -65,6 +65,9 @@ var loadContentBody = function(videoId, timerContent) {
                         console.log(state);
                         editor.setValue("");
                         console.log(someData_notJSON[i].datafor);
+                        if (someData_notJSON[i].quiz !== undefined) {
+                            loadQuiz(someData_notJSON[i].quiz);
+                        }
                         say(someData_notJSON[i].datafor);
                         state = 'false';
                         setTimeout(function() {
@@ -94,7 +97,7 @@ function loadQuiz(quizData){
         return optHtml
     }
     $('.modal.quiz').remove();
-    html = '';
+    var html = ''; // local var
     html +=  '<div class="modal quiz fade" tabindex="-1" role="dialog">' +
                 '<div class="modal-dialog">' +
                   '<div class="modal-content">' +
@@ -117,11 +120,12 @@ function loadQuiz(quizData){
     $('.modal').modal();
 
     $('.quiz-submit').click(function(el){
+        $(".alert").fadeOut(400);
         var target = $(el.target);
         var correct  = $('input[name=quizradio]:checked').attr('correct');
         if (correct == 'true'){
             $('.modal .modal-body').append('<div class="alert alert-success" role="alert">Awesome! You are right.</div>');
-            setTimeout(function(){ $('.modal').remove(); }, 3000)
+            setTimeout(function(){ $('.modal').modal('hide'); }, 3000)
         }else{
             $('.modal .modal-body').append('<div class="alert alert-danger" role="alert">Oops! Try again.</div>');
         }
