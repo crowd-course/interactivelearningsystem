@@ -9,7 +9,7 @@ function onYouTubeIframeAPIReady() {
         var html = '<li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
         for (key in data) {
             var mod = data[key];
-            html += '<li><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' + mod.name + '</a><ul class="dropdown-menu">';
+            html += '<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">' + mod.name + '</a><ul class="dropdown-menu">';
             for (j in mod.children) {
                 var ch = mod.children[j];
                 html += '<li><a class="module" module="' + ch.module + '" href="#">' + ch.name + '</a></li>'

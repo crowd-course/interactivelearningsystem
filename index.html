@@ -14,11 +14,6 @@
     <link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
     <link rel="stylesheet" href="assets/css/bootcards-demo-app.css">
     <link rel="stylesheet" href="assets/css/main.css">
-    <style>
-    .dropdown-menu {
-        top: 65% !important;
-    }
-    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -54,6 +49,7 @@
             </div>
         </div>
     </div>
+
     <nav id="offCanvasMenu" class="navmenu offcanvas offcanvas-left">
         <ul class="nav">
             <li class="active"><a href="#" data-pjax="#main" data-title="Home"><i class="fa fa-lg fa-home"></i> Home</a></li>
@@ -65,54 +61,7 @@
     <div class="container bootcards-container" id="main">
         <div class="row">
             <div class="col-sm-12">
-                <nav>
-                    <ul class="pagination">
-                        <li><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Introduction</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="module" module="1" href="#">Why Python ?</a></li>
-                                <li><a class="module" module="2" href="#">Setup</a></li>
-                                <li><a class="module" href="#">Instructions</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Basics</a>
-                            <ul class="dropdown-menu">
-                                <li><a class="module" href="#">Numbers, Operators and Operations</a></li>
-                                <li><a class="module" href="#">Input and Output Operations</a></li>
-                                <li><a class="module" href="#">Strings</a></li>
-                                <li><a class="module" href="#">Lists</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Intermediate</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Control flow tools</a></li>
-                                <li><a href="#">Functions</a></li>
-                                <li><a href="#">Datastructures</a></li>
-                                <li><a href="#">Classes</a></li>
-                                <li><a href="#">Recursion</a></li>
-                                <li><a href="#">Debugging</a></li>
-                                <li><a href="#">Assertions and Exemptions</a></li>
-                                <li><a href="#">Efficiency and Orders of Growth - Time</a></li>
-                                <li><a href="#">Simple Algorithms</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Advanced</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Modules</a></li>
-                                <li><a href="#">File IO</a></li>
-                                <li><a href="#">Error and Exceptions</a></li>
-                                <li><a href="#">Memory and search</a></li>
-                                <li><a href="#">Multithreading</a></li>
-                                <li><a href="#">Network and Sockets</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
-                    </ul>
-                </nav>
+                <nav><ul class="pagination navbar-nav"></ul></nav>
             </div>
         </div>
         <div class="row">
