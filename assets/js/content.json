@@ -4,6 +4,7 @@
         "name": "Introduction",
         "children": [{
             "name": "Why Python?",
+            "desc": "Hm?",
             "module" : "1"
         },{
             "name": "Setup",

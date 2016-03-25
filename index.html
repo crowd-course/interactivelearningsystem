@@ -14,6 +14,99 @@
     <link rel="stylesheet" href="assets/css/bootcards-desktop.min.css">
     <link rel="stylesheet" href="assets/css/bootcards-demo-app.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <style>
+        .sidebarContent {
+            background:#7CA1CA;
+            color:#FFF;
+            position: absolute;
+            left: -300px;
+            top: 50px;
+            height: 100%;
+            width: 300px;
+            padding: 10px;
+            transition: left 300ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+        #toggle {
+            position:absolute;
+            appearance:none;
+            cursor:pointer;
+            left:-100%;
+            top:-100%;
+        }
+
+        #toggle + .container label {
+            /*position:absolute;*/
+            cursor:pointer;
+            padding:10px;
+            background: #7CA1CA;
+            width: 100px;
+            border-radius: 3px;
+            padding: 8px 10px;
+            color: #FFF;
+            line-height:20px;
+            font-size:12px;
+            text-align:center;
+            -webkit-font-smoothing: antialiased;
+            cursor: pointer;
+            /*margin:20px 50px;*/
+            transition: all 500ms ease;
+        }
+
+        #toggle + .container label:after {
+            content:"Show Nav"
+        }
+
+        .container {
+            transition: all 400ms cubic-bezier(0.17, 0.04, 0.03, 0.94);
+            /*doesn't seem to work*/
+        }
+
+        #toggle:checked ~ .container .sidebarContent {
+            left: 6px;
+        }
+
+        #toggle:checked ~ .container {
+            margin-left: 300px;
+        }
+
+        #toggle:checked + .container label {
+            background: #D65C5C;
+        }
+
+        #toggle:checked + .container label:after {
+            content:"Hide Nav"
+        }
+
+        .sidebarContent a.list-group-item:before {
+            /*removes the arrow*/
+            content: "";
+        }
+        .sidebarContent .panel-default .panel-heading {
+            padding: 5px 15px;
+        }
+
+        .sidebarContent h4 {
+            font-size: 14px;
+        }
+
+        .sidebarContent a.list-group-item {
+            margin-left: 0;
+            padding-left: 15px;
+        }
+
+        .sidebarContent .panel-heading a:focus {
+            outline: none;
+        }
+
+        .sidebarContent .panel-heading a,
+        .sidebarContent .panel-heading a:hover,
+        .sidebarContent .panel-heading a:focus {
+            text-decoration: none;
+            color: #777777;
+        }
+    </style>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -58,12 +151,77 @@
         </ul>
         <div style="margin-top:20px; padding-left: 20px; font-size: 12px; color: #777">v1.0</div>
     </nav>
-    <div class="container bootcards-container" id="main">
-        <div class="row">
-            <div class="col-sm-12">
-                <nav><ul class="pagination navbar-nav"></ul></nav>
+
+    <input type="checkbox" name="toggle" id="toggle" />
+    <div class="container">
+        <label for="toggle"></label>
+
+        <div class="sidebarContent">
+            <div class="panel-group" id="accordion-cat-1">
+                <div class="panel panel-default panel-faq">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-1">
+                            <h4 class="panel-title">
+                                Chapter 1
+                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                <h5>Data types, Data Structures, Operators and I/O</h5>
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="faq-cat-1-sub-1" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item active">
+                                    <h4 class="list-group-item-heading">Numbers, operators, and operations</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">Input and Output operations</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default panel-faq">
+                    <div class="panel-heading">
+                        <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-2">
+                            <h4 class="panel-title">
+                                Chapter 1
+                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                <h5>Data types, Data Structures, Operators and I/O</h5>
+                            </h4>
+                        </a>
+                    </div>
+                    <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="#" class="list-group-item active">
+                                    <h4 class="list-group-item-heading">Numbers, operators, and operations</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                                <a href="#" class="list-group-item">
+                                    <h4 class="list-group-item-heading">Input and Output operations</h4>
+                                    <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+
+
+    <div class="container bootcards-container" id="main">
+        <!-- <div class="row"> -->
+            <!-- <a href="#" class="btn btn-danger" id="opener"><i class="glyphicon glyphicon-align-justify"></i></a> -->
+        <!-- </div> -->
+        <!-- <div class="row"> -->
+            <!-- <div class="col-sm-12"> -->
+                <!-- <nav><ul class="pagination navbar-nav"></ul></nav> -->
+            <!-- </div> -->
+        <!-- </div> -->
         <div class="row">
             <div class="bootcards-cards">
                 <div class="col-sm-6">
