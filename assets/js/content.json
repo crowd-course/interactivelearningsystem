@@ -97,7 +97,7 @@
                 {
                     "time": "104",
                     "end": "106",
-                    "datafor": "#Hello friends, This is ashukat. Today, we are going to write\n#a simple while loop\ncount = 0\nwhile (count < 9):\n\tprint(count)\n\tcount = count + 1\n#now execute the code", "slidedata": "images/4.jpg",
+                    "datafor": "#Hello friends, This is ashukat. Today, we are going to write\n#a simple while loop\ncount = 0\nwhile (count < 9):\n\tprint(\"This is the count:\",count)\n\tcount = count + 1\n#now execute the code", "slidedata": "images/4.jpg",
                     "pause": "true"
                 },
                 { "time": "107", "end": "158", "datafor": "Infinite loops", "slidedata": "images/4.jpg", "pause": "false" },
