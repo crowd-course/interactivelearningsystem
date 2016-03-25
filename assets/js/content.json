@@ -83,7 +83,7 @@
     "modules": {
         "1": {
             "name": "Why Python ?",
-            "videoId": "LNk3gdXkxFg",
+            "videoId": "Oe6rHPmFY3o",
             "timerData": [
                 { "time": "0", "end": "14", "datafor": "Intro to Python: Loops", "slidedata": "images/1.jpg", "pause": "false" },
                 { "time": "14", "end": "60", "datafor": "What is a loop", "slidedata": "images/2.jpg", "pause": "false" },
@@ -107,7 +107,13 @@
             ]
         },
         "2": {
-            "name": "Second",
+            "name": "DataStructures",
+            "videoId": "vmj7Wph-yDg",
+            "timerData": [
+            ]
+        },
+        "3": {
+            "name": "Loops",
             "videoId": "LNk3gdXkxFg",
             "timerData": [
             ]
