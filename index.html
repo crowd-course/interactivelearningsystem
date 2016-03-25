@@ -180,9 +180,11 @@
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/python");
+    editor.$blockScrolling = Infinity
     var session = editor.session;
     //Initializing typing function
     function say(str) {
+        showEditor(); // display editor just in case if student navigates away
         (function iterator(index) {
             if (index < str.length) {
                 session.insert({
