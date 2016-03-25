@@ -20,7 +20,7 @@ function onYouTubeIframeAPIReady() {
     //     $('nav ul.pagination').html(html);
     // }
 
-    function getNavigation(data) {
+    function getNavigation(data, activeModule) {
         var html = '<div class="panel-group" id="accordion-cat-1">';
         var i = 1;
         for (key in data) {
@@ -30,7 +30,7 @@ function onYouTubeIframeAPIReady() {
                     </a></div><div id="faq-cat-1-sub-' + i + '" class="panel-collapse collapse"><div class="panel-body"><div class="list-group">';
             for (j in mod.children) {
                 var ch = mod.children[j];
-                html += '<a href="#" class="list-group-item' + ((i == 1 && ch.module == "1") ? ' active' : '') + '"><h4 module="' + ch.module + '" class="list-group-item-heading">' + ch.name + '</h4>';
+                html += '<a href="#" class="list-group-item' + ((ch.module == activeModule) ? ' active' : '') + '"><h4 module="' + ch.module + '" class="list-group-item-heading">' + ch.name + '</h4>';
                 if (ch.desc) {
                     html += '<p class="list-group-item-text">' + ch.desc + '</p>';
                 }
@@ -46,11 +46,23 @@ function onYouTubeIframeAPIReady() {
     $.getJSON("/assets/js/content.json", function(data) {
         console.log(data);
 
-        //Get the navigation
-        getNavigation(data.navigation);
+        var activeModule = '1';
 
-        var firstModule = data.modules["1"];
-        loadModule(firstModule);
+        if (window.location.hash) {
+            var hash = window.location.hash.substring(1);
+            // hash found so load that module
+            var module = data.modules[hash];
+            loadModule(module);
+            activeModule = hash;
+        } else {
+            // No hash found load first module
+            var firstModule = data.modules["1"];
+            loadModule(firstModule);
+        }
+
+        //Get the navigation
+        getNavigation(data.navigation, activeModule);
+
 
         $("#accordion-cat-1 h4.list-group-item-heading").click(function(elem) {
             var module = $(elem.target).attr('module');
@@ -59,6 +71,8 @@ function onYouTubeIframeAPIReady() {
                 return
             }
             loadModule(data.modules[module])
+            $('.list-group-item.active').removeClass('active');
+            $(elem.target).parent().addClass('active');
         });
 
     });
