@@ -64,9 +64,13 @@ var loadContentBody = function(videoId, timerContent) {
                     if (someData_notJSON[i].pause == "true") {
                         console.log(state);
                         editor.setValue("");
+                        console.log(someData_notJSON[i].datafor);
                         say(someData_notJSON[i].datafor);
                         state = 'false';
-                        player.pauseVideo();
+                        setTimeout(function() {
+                            player.pauseVideo();
+                        }, 1000);
+
                     }
                 }
             }
