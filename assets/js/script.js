@@ -32,7 +32,7 @@ var loadContentBody = function(videoId, timerContent) {
         // the elapsed part of the progress bar every second.
         time_update_interval = setInterval(function() {
             updateTimerDisplay();
-        }, 500);
+        }, 1000);
 
 
         $('#volume-input').val(Math.round(player.getVolume()));
@@ -45,11 +45,11 @@ var loadContentBody = function(videoId, timerContent) {
 
     var someData_notJSON = timerContent;
     // This function is called by initialize()
-    state = 'true';
+    //state = 'true';
 
     function updateTimerDisplay() {
         // Update current time text display.
-        if (state == 'true') {
+        //if (state == 'true') {
             var a = formatTime(player.getCurrentTime());
             var b = formatTime(player.getDuration());
             var c = a.split(':');
@@ -59,17 +59,17 @@ var loadContentBody = function(videoId, timerContent) {
             $('#current-time').text(secondsa);
             $('#duration').text(secondsb);
             for (i = 0; i < someData_notJSON.length; i++) {
-                if (secondsa > someData_notJSON[i].time && secondsa < someData_notJSON[i].end && state == 'true') {
+                if (secondsa > someData_notJSON[i].time && secondsa < someData_notJSON[i].end/* && state == 'true'*/) {
                     image = '<img class="img-responsive" src="' + someData_notJSON[i].slidedata + '">'
                     if (someData_notJSON[i].pause == "true") {
-                        console.log(state);
+                        //console.log(state);
                         editor.setValue("");
                         console.log(someData_notJSON[i].datafor);
                         if (someData_notJSON[i].quiz !== undefined) {
                             loadQuiz(someData_notJSON[i].quiz);
                         }
                         say(someData_notJSON[i].datafor);
-                        state = 'false';
+                        //state = 'false';
                         setTimeout(function() {
                             player.pauseVideo();
                         }, 1000);
@@ -77,7 +77,7 @@ var loadContentBody = function(videoId, timerContent) {
                     }
                 }
             }
-        }
+        //}
     }
 }
 

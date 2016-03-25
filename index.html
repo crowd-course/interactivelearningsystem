@@ -233,13 +233,13 @@
         try {
             sleepFor(1);
             eval(Sk.importMainWithBody("<stdin>", false, prog));
-            state = 'true';
+            //state = 'true';
             $('#editor').hide();
             $('#output').show();
             //player.playVideo();
         } catch (e) {
             alert(e.toString())
-            state = 'false';
+            //state = 'false';
             //player.pauseVideo();
         }
     }
