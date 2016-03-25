@@ -8,10 +8,12 @@
             "module" : "1"
         },{
             "name": "Setup",
-            "module" : "2"
+            "module" : "2",
+            "desc": "Sample description"
         },{
             "name": "Instructions",
-            "module" : "3"
+            "module" : "3",
+            "desc": "Sample description"
         }]
     },{
         "name": "Basics",
