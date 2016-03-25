@@ -64,7 +64,7 @@
         }
 
         #toggle:checked ~ .container .sidebarContent {
-            left: 6px;
+            left: 0;
         }
 
         #toggle:checked ~ .container {
@@ -288,7 +288,7 @@
     var editor = ace.edit("editor");
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/python");
-    editor.$blockScrolling = Infinity
+    editor.$blockScrolling = Infinity;
     var session = editor.session;
     //Initializing typing function
     function say(str) {
