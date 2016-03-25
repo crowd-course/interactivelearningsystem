@@ -109,7 +109,7 @@ function loadQuiz(quizData){
                       '<p>' + quizData.question+ '</p>' +
                       getOptions() +
                     '</div>' +
-                    '<div class="modal-footer">' +
+                    '<div id="alerts"></div><div class="modal-footer">' +
                       '<button type="button" class="btn btn-default" data-dismiss="modal">Skip</button>' +
                       '<button type="button" class="quiz-submit btn btn-primary">Submit</button>' +
                     '</div>' +
@@ -124,10 +124,10 @@ function loadQuiz(quizData){
         var target = $(el.target);
         var correct  = $('input[name=quizradio]:checked').attr('correct');
         if (correct == 'true'){
-            $('.modal .modal-body').append('<div class="alert alert-success" role="alert">Awesome! You are right.</div>');
-            setTimeout(function(){ $('.modal').modal('hide'); }, 3000)
+            document.getElementById("alerts").innerHTML ='<div class="alert alert-success" role="alert">Awesome! You are right.</div>';
+            setTimeout(function(){ $('.modal').modal('hide'); }, 1000)
         }else{
-            $('.modal .modal-body').append('<div class="alert alert-danger" role="alert">Oops! Try again.</div>');
+            document.getElementById("alerts").innerHTML ='<div class="alert alert-danger" role="alert">Oops! Try again.</div>';
         }
     });
 }
