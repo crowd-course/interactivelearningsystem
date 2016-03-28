@@ -17,6 +17,8 @@ var loadContentBody = function(videoId, timerContent) {
         }
     });
 
+    editor.setValue("");
+
 
 
     function initialize() {
