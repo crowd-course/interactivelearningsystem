@@ -55,7 +55,7 @@
         }
 
         #toggle + .container label:after {
-            content:"Show Nav"
+            content:"Chapters"
         }
 
         .container {
@@ -76,7 +76,7 @@
         }
 
         #toggle:checked + .container label:after {
-            content:"Hide Nav"
+            content:"Hide"
         }
 
         .sidebarContent a.list-group-item:before {
@@ -229,7 +229,7 @@
                         <div class="panel-heading">
                             <h3 id="video-title" class="panel-title">Video</h3>
                         </div>
-                        <div class="embed-responsive embed-responsive-16by9">
+                        <div class="video embed-responsive embed-responsive-16by9">
                             <div id="video-placeholder" class="embed-responsive-item"></div>
                         </div>
                     </div>
@@ -356,6 +356,7 @@
         $('#editor').show();
         $('#output').hide();
     }
+    var player = null;
     </script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.6/highlight.min.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>

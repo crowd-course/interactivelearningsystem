@@ -3,23 +3,19 @@
     "navigation": [{
         "name": "Introduction",
         "children": [{
-            "name": "Why Python?",
-            "desc": "Hm?",
+            "name": "Getting Started",
+            "desc": "This chapter explains what python is as a programming language and why should we learn python.",
             "module" : "1"
         },{
-            "name": "Setup",
-            "module" : "2",
-            "desc": "Sample description"
-        },{
             "name": "Instructions",
-            "module" : "3",
-            "desc": "Sample description"
+            "desc" : "This chapter introduces the interactive portal and teaches you how to make use of the features.",
+            "module": "2"
         }]
     },{
         "name": "Basics",
         "children": [{
-            "name": "Numbers, Operators and Operations",
-            "module" : "4"
+            "name": "Numbers, Booleans, Operators and Operations",
+            "module" : "3"
         },{
             "name": "Input and Output Operations",
             "module" : "5"
@@ -84,6 +80,37 @@
     }],
     "modules": {
         "1": {
+            "name": "Getting Started",
+            "videoId": "Oe6rHPmFY3o",
+            "timerData": [
+            ]
+        },
+        "2": {
+            "name": "Instructions",
+            "videoId": "Oe6rHPmFY3o",
+            "timerData": [
+            ]
+        },
+        "3": {
+            "name": "1.1 - Number, Operators and Operations",
+            "videoId": "hdUSqV34asA",
+            "timerData": [
+                { "time": "209", "end": "211", "pause": "true",
+                     "quiz": {
+                        "question": "What will be the result of <pre>1 * 5 + -5  </pre>?",
+                        "options": ["5", "Error", "0"],
+                        "correct": 1
+                    }
+                }
+            ]
+        },
+        "4": {
+            "name": "DataStructures",
+            "videoId": "vmj7Wph-yDg",
+            "timerData": [
+            ]
+        },
+        "5":  {
             "name": "Why Python ?",
             "videoId": "Oe6rHPmFY3o",
             "timerData": [
@@ -108,17 +135,5 @@
                 { "time": "277", "end": "321", "datafor": "Nesting", "slidedata": "images/7.jpg", "pause": "false" }
             ]
         },
-        "2": {
-            "name": "DataStructures",
-            "videoId": "vmj7Wph-yDg",
-            "timerData": [
-            ]
-        },
-        "3": {
-            "name": "Loops",
-            "videoId": "LNk3gdXkxFg",
-            "timerData": [
-            ]
-        }
     }
 }

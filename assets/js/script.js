@@ -1,8 +1,7 @@
 // @author  Asheesh Sharma
 // @version 0.1
 var loadContentBody = function(videoId, timerContent) {
-    var player,
-        time_update_interval = 0;
+    var time_update_interval = 0;
 
     $('.video.embed-responsive.embed-responsive-16by9').html('<div id="video-placeholder" class="embed-responsive-item"></div>');
     player = new YT.Player('video-placeholder', {
@@ -50,84 +49,86 @@ var loadContentBody = function(videoId, timerContent) {
     function updateTimerDisplay() {
         // Update current time text display.
         //if (state == 'true') {
-            var a = formatTime(player.getCurrentTime());
-            var b = formatTime(player.getDuration());
-            var c = a.split(':');
-            var d = b.split(':');
-            var secondsa = (+c[0]) * 60 + (+c[1]);
-            var secondsb = (+d[0]) * 60 + (+d[1]);
-            $('#current-time').text(secondsa);
-            $('#duration').text(secondsb);
-            for (i = 0; i < someData_notJSON.length; i++) {
-                if (secondsa > someData_notJSON[i].time && secondsa < someData_notJSON[i].end/* && state == 'true'*/) {
-                    image = '<img class="img-responsive" src="' + someData_notJSON[i].slidedata + '">'
-                    if (someData_notJSON[i].pause == "true") {
-                        //console.log(state);
-                        editor.setValue("");
-                        console.log(someData_notJSON[i].datafor);
-                        if (someData_notJSON[i].quiz !== undefined) {
-                            loadQuiz(someData_notJSON[i].quiz);
-                        }
-                        say(someData_notJSON[i].datafor);
-                        //state = 'false';
-                        setTimeout(function() {
-                            player.pauseVideo();
-                        }, 1000);
-
+        var a = formatTime(player.getCurrentTime());
+        var b = formatTime(player.getDuration());
+        var c = a.split(':');
+        var d = b.split(':');
+        var secondsa = (+c[0]) * 60 + (+c[1]);
+        var secondsb = (+d[0]) * 60 + (+d[1]);
+        $('#current-time').text(secondsa);
+        $('#duration').text(secondsb);
+        for (i = 0; i < someData_notJSON.length; i++) {
+            if (secondsa > someData_notJSON[i].time && secondsa < someData_notJSON[i].end /* && state == 'true'*/ ) {
+                image = '<img class="img-responsive" src="' + someData_notJSON[i].slidedata + '">'
+                if (someData_notJSON[i].pause == "true") {
+                    //console.log(state);
+                    editor.setValue("");
+                    console.log(someData_notJSON[i].datafor);
+                    if (someData_notJSON[i].quiz) {
+                        loadQuiz(someData_notJSON[i].quiz);
                     }
+                    if (someData_notJSON[i].datafor) {
+                        say(someData_notJSON[i].datafor);
+                    }
+                    //state = 'false';
+                    setTimeout(function() {
+                        player.pauseVideo();
+                    }, 1000);
+
                 }
             }
+        }
         //}
     }
 }
 
 
-function loadQuiz(quizData){
+function loadQuiz(quizData) {
 
-    function getOptions(){
+    function getOptions() {
         var optHtml = '<ul>';
-        for (key in quizData.options){
+        for (key in quizData.options) {
             var option = quizData.options[key]
             var correct = 'false'
             if (quizData.correct == key)
                 correct = 'true'
-            optHtml += '<li><label><input type="radio" correct="'+correct+'" name="quizradio">&nbsp;&nbsp;'+option+'</label></li>'
+            optHtml += '<li><label><input type="radio" correct="' + correct + '" name="quizradio">&nbsp;&nbsp;' + option + '</label></li>'
         }
         optHtml += '</ul>'
         return optHtml
     }
     $('.modal.quiz').remove();
     var html = ''; // local var
-    html +=  '<div class="modal quiz fade" tabindex="-1" role="dialog">' +
-                '<div class="modal-dialog">' +
-                  '<div class="modal-content">' +
-                    '<div class="modal-header">' +
-                      '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
-                      '<h4 class="modal-title">Quiz</h4>' +
-                    '</div>'+
-                    '<div class="modal-body">'+
-                      '<p>' + quizData.question+ '</p>' +
-                      getOptions() +
-                    '</div>' +
-                    '<div id="alerts"></div><div class="modal-footer">' +
-                      '<button type="button" class="btn btn-default" data-dismiss="modal">Skip</button>' +
-                      '<button type="button" class="quiz-submit btn btn-primary">Submit</button>' +
-                    '</div>' +
-                  '</div>' +
-                '</div>' +
-              '</div>';
+    html += '<div class="modal quiz fade" tabindex="-1" role="dialog">' +
+        '<div class="modal-dialog">' +
+        '<div class="modal-content">' +
+        '<div class="modal-header">' +
+        '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>' +
+        '<h4 class="modal-title">Quiz</h4>' +
+        '</div>' +
+        '<div class="modal-body">' +
+        '<p>' + quizData.question + '</p>' +
+        getOptions() +
+        '</div>' +
+        '<div id="alerts"></div><div class="modal-footer">' +
+        '<button type="button" class="btn btn-default" data-dismiss="modal">Skip</button>' +
+        '<button type="button" class="quiz-submit btn btn-primary">Submit</button>' +
+        '</div>' +
+        '</div>' +
+        '</div>' +
+        '</div>';
     $('body').append(html);
     $('.modal').modal();
 
-    $('.quiz-submit').click(function(el){
+    $('.quiz-submit').click(function(el) {
         $(".alert").fadeOut(400);
         var target = $(el.target);
-        var correct  = $('input[name=quizradio]:checked').attr('correct');
-        if (correct == 'true'){
-            document.getElementById("alerts").innerHTML ='<div class="alert alert-success" role="alert">Awesome! You are right.</div>';
-            setTimeout(function(){ $('.modal').modal('hide'); }, 1000)
-        }else{
-            document.getElementById("alerts").innerHTML ='<div class="alert alert-danger" role="alert">Oops! Try again.</div>';
+        var correct = $('input[name=quizradio]:checked').attr('correct');
+        if (correct == 'true') {
+            document.getElementById("alerts").innerHTML = '<div class="alert alert-success" role="alert">Awesome! You are right.</div>';
+            setTimeout(function() { $('.modal').modal('hide'); }, 1000)
+        } else {
+            document.getElementById("alerts").innerHTML = '<div class="alert alert-danger" role="alert">Oops! Try again.</div>';
         }
     });
 }
