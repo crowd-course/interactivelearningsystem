@@ -14,27 +14,27 @@
     }, {
         "name": "Basics",
         "children": [{
-            "name": "Numbers, Booleans, Operators and Operations",
+            "name": "1.1 - Number, Operators and Operations",
             "desc": "Introduction to python basic numeric and boolean datatypes and operations using them.",
             "module": "3"
         }, {
-            "name": "Input and Output Operations",
+            "name": "1.2 - Basic Input and Output Operators",
+            "module": "4"
+        }, {
+            "name": "1.3 - Strings",
             "module": "5"
         }, {
-            "name": "Strings",
+            "name": "1.4 - Lists",
             "module": "6"
-        }, {
-            "name": "Lists",
-            "module": "7"
         }]
     }, {
         "name": "Intermediate",
         "children": [{
-            "name": "Control flow tools",
-            "module": "8"
+            "name": "2.1 - Control Flow",
+            "module": "7"
         }, {
-            "name": "Functions",
-            "module": "9"
+            "name": "2.2 - Functions",
+            "module": "8"
         }, {
             "name": "Datastructures",
             "module": "10"
@@ -189,8 +189,28 @@
             }]
         },
         "4": {
-            "name": "DataStructures",
-            "videoId": "vmj7Wph-yDg",
+            "name": "1.2 - Basic Input and Output Operators",
+            "videoId": "db3C4o__SLw",
+            "timerData": []
+        },
+        // "5": {
+        //     "name": "1.3 - Strings",
+        //     "videoId": "db3C4o__SLw",
+        //     "timerData": []
+        // },
+        "6": {
+            "name": "1.4 - Lists",
+            "videoId": "VMdWMr9unPw",
+            "timerData": []
+        },
+        "7": {
+            "name": "2.1 - Control Flow",
+            "videoId": "Y_hPiOhnlu0",
+            "timerData": []
+        },
+        "8": {
+            "name": "2.2 - Functions",
+            "videoId": "eYKvaRPc5yY",
             "timerData": []
         },
         "5": {
