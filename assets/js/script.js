@@ -4,7 +4,7 @@ var loadContentBody = function(videoId, timerContent) {
     var player,
         time_update_interval = 0;
 
-    $('.embed-responsive.embed-responsive-16by9').html('<div id="video-placeholder" class="embed-responsive-item"></div>');
+    $('.video.embed-responsive.embed-responsive-16by9').html('<div id="video-placeholder" class="embed-responsive-item"></div>');
     player = new YT.Player('video-placeholder', {
         width: 600,
         height: 400,
