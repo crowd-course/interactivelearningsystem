@@ -5,128 +5,131 @@
         "children": [{
             "name": "Getting Started",
             "desc": "This chapter explains what python is as a programming language and why should we learn python.",
-            "module" : "1"
-        },{
+            "module": "1"
+        }, {
             "name": "Instructions",
-            "desc" : "This chapter introduces the interactive portal and teaches you how to make use of the features.",
+            "desc": "This chapter introduces the interactive portal and teaches you how to make use of the features.",
             "module": "2"
         }]
-    },{
+    }, {
         "name": "Basics",
         "children": [{
             "name": "Numbers, Booleans, Operators and Operations",
-            "module" : "3"
-        },{
+            "module": "3"
+        }, {
             "name": "Input and Output Operations",
-            "module" : "5"
-        },{
+            "module": "5"
+        }, {
             "name": "Strings",
-            "module" : "6"
-        },{
-        	"name": "Lists",
-        	"module": "7"
+            "module": "6"
+        }, {
+            "name": "Lists",
+            "module": "7"
         }]
-    },{
+    }, {
         "name": "Intermediate",
         "children": [{
             "name": "Control flow tools",
-            "module" : "8"
-        },{
+            "module": "8"
+        }, {
             "name": "Functions",
-            "module" : "9"
-        },{
+            "module": "9"
+        }, {
             "name": "Datastructures",
-            "module" : "10"
-        },{
-        	"name": "Classes",
-        	"module": "11"
-        },{
-        	"name": "Recursion",
-        	"module": "12"
-        },{
-        	"name": "Debugging",
-        	"module": "13"
-        },{
-        	"name": "Assertions and Exemptions",
-        	"module": "14"
-        },{
-        	"name": "Efficiency and Orders of Growth - Time",
-        	"module": "15"
-        },{
-        	"name": "Simple Algorithms",
-        	"module": "16"
+            "module": "10"
+        }, {
+            "name": "Classes",
+            "module": "11"
+        }, {
+            "name": "Recursion",
+            "module": "12"
+        }, {
+            "name": "Debugging",
+            "module": "13"
+        }, {
+            "name": "Assertions and Exemptions",
+            "module": "14"
+        }, {
+            "name": "Efficiency and Orders of Growth - Time",
+            "module": "15"
+        }, {
+            "name": "Simple Algorithms",
+            "module": "16"
         }]
-    },{
+    }, {
         "name": "Advanced",
         "children": [{
             "name": "Modules",
-            "module" : "17"
-        },{
+            "module": "17"
+        }, {
             "name": "File IO",
-            "module" : "18"
-        },{
+            "module": "18"
+        }, {
             "name": "Error and Exceptions",
-            "module" : "19"
-        },{
-        	"name": "Memory and search",
-        	"module": "20"
-        },{
-        	"name": "Multithreading",
-        	"module": "20"
-        },{
-        	"name": "Network and Sockets",
-        	"module": "20"
+            "module": "19"
+        }, {
+            "name": "Memory and search",
+            "module": "20"
+        }, {
+            "name": "Multithreading",
+            "module": "20"
+        }, {
+            "name": "Network and Sockets",
+            "module": "20"
         }]
     }],
     "modules": {
         "1": {
             "name": "Getting Started",
             "videoId": "Oe6rHPmFY3o",
-            "timerData": [
-            ]
+            "timerData": []
         },
         "2": {
             "name": "Instructions",
             "videoId": "Oe6rHPmFY3o",
-            "timerData": [
-            ]
+            "timerData": []
         },
         "3": {
             "name": "1.1 - Number, Operators and Operations",
             "videoId": "hdUSqV34asA",
-            "timerData": [
-                { "time": "209", "end": "211", "pause": "true",
-                     "quiz": {
-                        "question": "What will be the result of <pre>1 * 5 + -5  </pre>?",
-                        "options": ["5", "Error", "0"],
-                        "correct": 1
-                    }
+            "timerData": [{
+                "time": "209",
+                "end": "211",
+                "pause": "true",
+                "quiz": {
+                    "question": "What will be the result of <pre>1 * 5 + -5  </pre>?",
+                    "options": ["5", "Error", "0"],
+                    "correct": 1
                 }
-            ]
+            }]
         },
         "4": {
             "name": "DataStructures",
             "videoId": "vmj7Wph-yDg",
-            "timerData": [
-            ]
+            "timerData": []
         },
-        "5":  {
+        "5": {
             "name": "Why Python ?",
             "videoId": "Oe6rHPmFY3o",
             "timerData": [
                 { "time": "0", "end": "14", "datafor": "Intro to Python: Loops", "slidedata": "images/1.jpg", "pause": "false" },
                 { "time": "14", "end": "60", "datafor": "What is a loop", "slidedata": "images/2.jpg", "pause": "false" },
-                { "time": "60", "end": "91", "datafor": "While loops", "slidedata": "images/3.jpg", "pause": "false" },
-                { "time": "92", "end": "94", "datafor": "While loops", "slidedata": "images/3.jpg", "pause": "true",
-                     "quiz": {
+                { "time": "60", "end": "91", "datafor": "While loops", "slidedata": "images/3.jpg", "pause": "false" }, {
+                    "time": "92",
+                    "end": "94",
+                    "datafor": "While loops",
+                    "slidedata": "images/3.jpg",
+                    "pause": "true",
+                    "quiz": {
                         "question": "What version of Python is being used in this course?",
                         "options": ["2.6.6", "2.7.9", "3.x"],
                         "correct": 2
-                    }},
-                {
+                    }
+                }, {
                     "time": "104",
                     "end": "106",
-                    "datafor": "#Hello friends, This is ashukat. Today, we are going to write\n#a simple while loop\ncount = 0\nwhile (count < 9):\n\tprint(\"This is the count:\",count)\n\tcount = count + 1\n#now execute the code", "slidedata": "images/4.jpg",
+                    "datafor": "#Hello friends, This is ashukat. Today, we are going to write\n#a simple while loop\ncount = 0\nwhile (count < 9):\n\tprint(\"This is the count:\",count)\n\tcount = count + 1\n#now execute the code",
+                    "slidedata": "images/4.jpg",
                     "pause": "true"
                 },
                 { "time": "107", "end": "158", "datafor": "Infinite loops", "slidedata": "images/4.jpg", "pause": "false" },
@@ -134,6 +137,6 @@
                 { "time": "242", "end": "277", "datafor": "For loops", "slidedata": "images/6.jpg", "pause": "false" },
                 { "time": "277", "end": "321", "datafor": "Nesting", "slidedata": "images/7.jpg", "pause": "false" }
             ]
-        },
+        }
     }
 }
