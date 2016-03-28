@@ -36,47 +36,38 @@
             "name": "2.2 - Functions",
             "module": "8"
         }, {
-            "name": "Datastructures",
+            "name": "2.3 - Datastructures",
+            "module": "9"
+        }, {
+            "name": "2.4 - Classes",
             "module": "10"
         }, {
-            "name": "Classes",
+            "name": "2.5 - Recursion",
             "module": "11"
         }, {
-            "name": "Recursion",
+            "name": "2.6 - Debugging",
             "module": "12"
         }, {
-            "name": "Debugging",
+            "name": "2.8 - Efficiency and Orders of Growth - Time",
             "module": "13"
         }, {
-            "name": "Assertions and Exemptions",
+            "name": "2.9 - Simple Algorithms",
             "module": "14"
-        }, {
-            "name": "Efficiency and Orders of Growth - Time",
-            "module": "15"
-        }, {
-            "name": "Simple Algorithms",
-            "module": "16"
         }]
     }, {
         "name": "Advanced",
         "children": [{
-            "name": "Modules",
+            "name": "3.3 - Errors and Exceptions",
+            "module": "15"
+        }, {
+            "name": "3.4 - Multithreading",
+            "module": "16"
+        }, {
+            "name": "3.5 - Network Sockets",
             "module": "17"
         }, {
-            "name": "File IO",
+            "name": "4.0 - Good Coding Practices",
             "module": "18"
-        }, {
-            "name": "Error and Exceptions",
-            "module": "19"
-        }, {
-            "name": "Memory and search",
-            "module": "20"
-        }, {
-            "name": "Multithreading",
-            "module": "20"
-        }, {
-            "name": "Network and Sockets",
-            "module": "20"
         }]
     }],
     "modules": {
@@ -213,35 +204,60 @@
             "videoId": "eYKvaRPc5yY",
             "timerData": []
         },
-        "5": {
-            "name": "Why Python ?",
-            "videoId": "Oe6rHPmFY3o",
-            "timerData": [
-                { "time": "0", "end": "14", "datafor": "Intro to Python: Loops", "slidedata": "images/1.jpg", "pause": "false" },
-                { "time": "14", "end": "60", "datafor": "What is a loop", "slidedata": "images/2.jpg", "pause": "false" },
-                { "time": "60", "end": "91", "datafor": "While loops", "slidedata": "images/3.jpg", "pause": "false" }, {
-                    "time": "92",
-                    "end": "94",
-                    "datafor": "While loops",
-                    "slidedata": "images/3.jpg",
-                    "pause": "true",
-                    "quiz": {
-                        "question": "What version of Python is being used in this course?",
-                        "options": ["2.6.6", "2.7.9", "3.x"],
-                        "correct": 2
-                    }
-                }, {
-                    "time": "104",
-                    "end": "106",
-                    "datafor": "#Hello friends, This is ashukat. Today, we are going to write\n#a simple while loop\ncount = 0\nwhile (count < 9):\n\tprint(\"This is the count:\",count)\n\tcount = count + 1\n#now execute the code",
-                    "slidedata": "images/4.jpg",
-                    "pause": "true"
-                },
-                { "time": "107", "end": "158", "datafor": "Infinite loops", "slidedata": "images/4.jpg", "pause": "false" },
-                { "time": "158", "end": "242", "datafor": "Iterables", "slidedata": "images/5.jpg", "pause": "false" },
-                { "time": "242", "end": "277", "datafor": "For loops", "slidedata": "images/6.jpg", "pause": "false" },
-                { "time": "277", "end": "321", "datafor": "Nesting", "slidedata": "images/7.jpg", "pause": "false" }
-            ]
+        "9": {
+            "name": "2.3 - Datastructures",
+            "videoId": "eYKvaRPc5yY",
+            "timerData": []
+        },
+        "10": {
+            "name": "2.4 - Classes",
+            "videoId": "7vrY9UgBhy8",
+            "timerData": []
+        },
+        "11": {
+            "name": "2.5 - Recursion",
+            "videoId": "7vrY9UgBhy8",
+            "timerData": []
+        },
+        "12": {
+            "name": "2.6 - Debugging",
+            "videoId": "7vrY9UgBhy8",
+            "timerData": []
+        },
+        "13": {
+            "name": "2.8 - Efficiency and orders of growth",
+            "videoId": "JoeV6Zna7T4",
+            "timerData": []
+        },
+        "14": {
+            "name": "2.9 - Simple Algorithms",
+            "videoId": "Bs6JQMLXuL0",
+            "timerData": []
+        },
+        "14": {
+            "name": "2.9 - Simple Algorithms",
+            "videoId": "Bs6JQMLXuL0",
+            "timerData": []
+        },
+        "15": {
+            "name": "3.3 - Errors and Exceptions",
+            "videoId": "VSNjUV4HeX8",
+            "timerData": []
+        },
+        "16": {
+            "name": "3.4 - Multithreading",
+            "videoId": "VSNjUV4HeX8",
+            "timerData": []
+        },
+        "17": {
+            "name": "3.5 - Network Sockets",
+            "videoId": "Y6F3TtVH8rY",
+            "timerData": []
+        },
+        "18": {
+            "name": "4.0 - Good Coding Practices",
+            "videoId": "h53FfGqKmJ4",
+            "timerData": []
         }
     }
 }
