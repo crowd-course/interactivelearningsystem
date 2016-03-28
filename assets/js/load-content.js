@@ -43,7 +43,7 @@ function onYouTubeIframeAPIReady() {
         $('.sidebarContent').html(html);
     }
 
-    $.getJSON("/assets/js/content.json", function(data) {
+    $.getJSON("assets/js/content.json", function(data) {
         console.log(data);
 
         var activeModule = '1';
