@@ -62,19 +62,20 @@ var loadContentBody = function(videoId, timerContent) {
                 image = '<img class="img-responsive" src="' + someData_notJSON[i].slidedata + '">'
                 if (someData_notJSON[i].pause == "true") {
                     //console.log(state);
-                    editor.setValue("");
                     console.log(someData_notJSON[i].datafor);
                     if (someData_notJSON[i].quiz) {
                         loadQuiz(someData_notJSON[i].quiz);
-                    }
-                    if (someData_notJSON[i].datafor) {
-                        say(someData_notJSON[i].datafor);
                     }
                     //state = 'false';
                     setTimeout(function() {
                         player.pauseVideo();
                     }, 1000);
-
+                }
+                if (someData_notJSON[i].datafor) {
+                    editor.setValue("");
+                    say(someData_notJSON[i].datafor);
+                    $('.fa-play').popover({placement: 'top'});
+                    $('.fa-play').popover('show');
                 }
             }
         }
@@ -126,7 +127,10 @@ function loadQuiz(quizData) {
         var correct = $('input[name=quizradio]:checked').attr('correct');
         if (correct == 'true') {
             document.getElementById("alerts").innerHTML = '<div class="alert alert-success" role="alert">Awesome! You are right.</div>';
-            setTimeout(function() { $('.modal').modal('hide'); }, 1000)
+            setTimeout(function() {
+                $('.modal').modal('hide');
+                player.playVideo();
+            }, 1000)
         } else {
             document.getElementById("alerts").innerHTML = '<div class="alert alert-danger" role="alert">Oops! Try again.</div>';
         }
