@@ -287,7 +287,6 @@
                 "end": "545",
                 "datafor": "box_A=box_B=['red','green','blue']\nbox_A[0]='yellow'\nprint (box_B)",
                 "pause": "true"
-
             }, {
                 "time": "608",
                 "end": "610",
@@ -298,7 +297,7 @@
                 "end": "619",
                 "pause": "true",
                 "quiz": {
-                    "question": "What will be the result of this ?<pre>course = ['python', 'ML', 'robotics', 'networks']\ncourse[2] = 'java'\nsubjects = course\nsubjects[2] = 'C++'\nprint(course)</pre>",
+                    "question": "What will be the result of this ?<pre>course = ['python', 'ML', 'robotics', 'networks']<br>course[2] = 'java'<br>subjects = course<br>subjects[2] = 'C++'<br>print(course)</pre>",
                     "options": ["<pre>['python', 'ML', 'Java', 'networks']</pre>", "<pre>['python', 'ML', 'C++', 'networks']</pre>", "<pre>['python', 'ML', 'Java', 'networks']</pre>", "None of these"],
                     "correct": 1
                 }
