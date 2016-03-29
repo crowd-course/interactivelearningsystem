@@ -112,8 +112,8 @@ function loadQuiz(quizData) {
         '<div class="modal-body">' +
         '<p>' + quizData.question + '</p>' +
         getOptions() +
-        '</div>' +
-        '<div id="alerts"></div><div class="modal-footer">' +
+        '<div id="alerts"></div></div>' +
+        '<div class="modal-footer">' +
         '<button type="button" class="btn btn-default" data-dismiss="modal">Skip</button>' +
         '<button type="button" class="quiz-submit btn btn-primary">Submit</button>' +
         '</div>' +
