@@ -260,7 +260,7 @@
                     "options": ["<pre>['python', 'ML', 'Java', 'networks']</pre>", "<pre>['python', 'ML', 'C++', 'networks']</pre>", "<pre>['python', 'ML', 'Java', 'networks']</pre>", "None of these"],
                     "correct": 1
                 }
-            }, ]
+            }]
         },
         "7": {
             "name": "2.1 - Control Flow",
