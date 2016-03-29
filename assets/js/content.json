@@ -218,7 +218,7 @@
                  "quiz":{
                      "question":"what is this?\na='hello'\nprint(a*3)",
                      "option":["Repetition","Concatenation","Membership"],
-                     "correct":"1",
+                     "correct":"1",}
                      
                  }
                      
