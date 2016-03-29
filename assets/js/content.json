@@ -89,22 +89,22 @@
                 "end": "60",
                 "pause": "false",
                 "datafor": "a = 2 # a is an integer\nb = -7 # b is also an integer\n\nprint(a, b)"
-            },{
+            }, {
                 "time": "66",
                 "end": "68",
                 "pause": "false",
                 "datafor": "a = 2 # a is an integer\nb = -7 # b is also an integer\nc = 3.2 # c is a floating point number\nd = -7.5 # d is also a floating point number\n\nprint(a, b, c, d)"
-            },{
+            }, {
                 "time": "174",
                 "end": "176",
                 "pause": "false",
                 "datafor": "a = 6 + 3 # Addition of two integers gives an integer\nb = 7.5 + 2.4 # Addition of two floating point numbers give a floating point number.\n\nprint(a, b)"
-            },{
+            }, {
                 "time": "198",
                 "end": "200",
                 "pause": "false",
                 "datafor": "a = 6 * -7.3 # Unary operator acts before the binary. Same as 6 * (-7.3)\n\nprint(a)"
-            },{
+            }, {
                 "time": "208",
                 "end": "210",
                 "pause": "true",
@@ -113,62 +113,62 @@
                     "options": ["5", "Error", "0"],
                     "correct": 2
                 }
-            },{
+            }, {
                 "time": "291",
                 "end": "293",
                 "pause": "false",
                 "datafor": "a = 2**3\nprint(a)\n# This prints 8"
-            },{
+            }, {
                 "time": "302",
                 "end": "304",
                 "pause": "false",
                 "datafor": "a = 4**0.5\nprint(a)\n# This prints 2"
-            },{
+            }, {
                 "time": "325",
                 "end": "327",
                 "pause": "false",
                 "datafor": "a = 2**-2\nprint(a)\n# This prints 0.25"
-            },{
+            }, {
                 "time": "334",
                 "end": "336",
                 "pause": "false",
                 "datafor": "a = pow(2, 3) # this uses pow function\nprint(a)\n# This prints 8"
-            },{
+            }, {
                 "time": "390",
                 "end": "392",
                 "pause": "false",
                 "datafor": "a = abs(-7) \nprint(a)\n# This prints 7"
-            },{
+            }, {
                 "time": "410",
                 "end": "412",
                 "pause": "false",
                 "datafor": "a = round(4.4) \nprint(a)\n# This prints 4.0"
-            },{
+            }, {
                 "time": "440",
                 "end": "442",
                 "pause": "false",
                 "datafor": ""
-            },{
+            }, {
                 "time": "468",
                 "end": "470",
                 "pause": "false",
                 "datafor": "a = (1 + 1) == 2\nprint(a) # prints True"
-            },{
+            }, {
                 "time": "485",
                 "end": "487",
                 "pause": "false",
                 "datafor": "a = (1 + 1) == 2\nprint(a) # prints True\n\nb = (1 * 0) == 1\nprint(b) # prints False"
-            },{
+            }, {
                 "time": "516",
                 "end": "518",
                 "pause": "false",
                 "datafor": "a = (1 == 2) or (1 == 1)\nprint(a) # prints True\n\nb = (1 * 0) == 1\nprint(b) # prints False"
-            },{
+            }, {
                 "time": "566",
                 "end": "568",
                 "pause": "false",
                 "datafor": "a = (1 == 2) or (1 == 1)\nprint(a) # prints True\n\nb = (1 * 0) == 1\nprint(b) # prints False\n\nb = (1 == 1) and not (1 == 2)\nprint(b) # prints True"
-            },{
+            }, {
                 "time": "602",
                 "end": "604",
                 "pause": "true",
@@ -192,58 +192,57 @@
         "6": {
             "name": "1.4 - Lists",
             "videoId": "VMdWMr9unPw",
-            "timerData": [
-              {
-                "time":"199",
-                "end" :"201",
-                "datafor":"student=['joe','dave','mark']\nstudent[2]='steve'\nprint (student)",
-                "pause":"true"
-              },
-              {
-                "time":"251",
+            "timerData": [{
+                "time": "154",
+                "end": "156",
+                "pause": "true",
+                "quiz": {
+                    "question": "What will be the result of this ?<pre>student_year = [2001, 2012, 2014, 2016, 1997, 1987]\nprint (student_year[5])</pre>",
+                    "options": ["Error: Index out of bounds", "2001", "1997", "1987"],
+                    "correct": 3
+                }
+            }, {
+                "time": "199",
+                "end": "201",
+                "datafor": "student=['joe','dave','mark']\nstudent[2]='steve'\nprint (student)",
+                "pause": "true"
+            }, {
+                "time": "251",
                 "end": "253",
-                "datafor":"student=[\"joe\",\"dave\",\"mark\"]\nstudent.append('leo')\nprint (student)",
-                "pause":"true"
-              },
-              {
-                "time":"310",
-                "end":"312",
-                "datafor":"student=[\"joe\",\"dave\",\"mark\"]\nstudent.insert(2,'leo')\nprint (student)",
-                "pause":"true"
-              },
-              {
-                "time":"399",
-                "end":"401",
-                "datafor":"student=[\"joe\",\"dave\",\"mark\"]\ndel student\nprint (student)",
-                "pause":"true"
-              },
-              {
-                "time":"455",
-                "end":"457",
-                "datafor":"alpha=['A','B','C','D','E']\nprint (alpha[1:4])",
-                "pause":"true"
-              },
-              {
-                "time":"496",
-                "end":"498",
-                "datafor":"alpha=['A','B','C','D','E']\nalpha[0:6:2]=['#','#','#']\nprint (alpha)",
-                "pause":"true"
-              },
-              {
-                "time":"543",
-                "end":"545",
-                "datafor":"box_A=box_B=['red','green','blue']\nbox_A[0]='yellow'\nprint (box_B)",
-                "pause":"true"
+                "datafor": "student=[\"joe\",\"dave\",\"mark\"]\nstudent.append('leo')\nprint (student)",
+                "pause": "true"
+            }, {
+                "time": "310",
+                "end": "312",
+                "datafor": "student=[\"joe\",\"dave\",\"mark\"]\nstudent.insert(2,'leo')\nprint (student)",
+                "pause": "true"
+            }, {
+                "time": "399",
+                "end": "401",
+                "datafor": "student=[\"joe\",\"dave\",\"mark\"]\ndel student\nprint (student)",
+                "pause": "true"
+            }, {
+                "time": "455",
+                "end": "457",
+                "datafor": "alpha=['A','B','C','D','E']\nprint (alpha[1:4])",
+                "pause": "true"
+            }, {
+                "time": "496",
+                "end": "498",
+                "datafor": "alpha=['A','B','C','D','E']\nalpha[0:6:2]=['#','#','#']\nprint (alpha)",
+                "pause": "true"
+            }, {
+                "time": "543",
+                "end": "545",
+                "datafor": "box_A=box_B=['red','green','blue']\nbox_A[0]='yellow'\nprint (box_B)",
+                "pause": "true"
 
-              },
-              {
-                "time":"608",
-                "end":"610",
-                "datafor":"color_A=['red','green','blue']\ncolor_B=['red','green','blue']\ncolor_A[0]='yellow'\nprint (color_A)\nprint (color_B)",
-                "pause":"true"
-              }
-            ]
- 
+            }, {
+                "time": "608",
+                "end": "610",
+                "datafor": "color_A=['red','green','blue']\ncolor_B=['red','green','blue']\ncolor_A[0]='yellow'\nprint (color_A)\nprint (color_B)",
+                "pause": "true"
+            }]
         },
         "7": {
             "name": "2.1 - Control Flow",
