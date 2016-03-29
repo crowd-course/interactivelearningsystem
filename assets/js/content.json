@@ -190,7 +190,14 @@
                     "question":"What do we use to convert String to an Integer?",
                     "option":["int()","str()","float()"],
                     "correct":0
+                },
+                {"time":"182",
+                 "end":"184",
+                 "pause":"false",
+                 "datafor":"#Change favourite team according to you!Mine is laker\nfavouriteteam='Lakers'\nprint(\"my favourite team is\"+favouriteteam)",
+                    
                 }
+            
             }]
         },
         "5": {
