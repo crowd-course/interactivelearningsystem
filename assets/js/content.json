@@ -192,7 +192,58 @@
         "6": {
             "name": "1.4 - Lists",
             "videoId": "VMdWMr9unPw",
-            "timerData": []
+            "timerData": [
+              {
+                "time":"199",
+                "end" :"201",
+                "datafor":"student=['joe','dave','mark']\nstudent[2]='steve'\nprint (student)",
+                "pause":"true"
+              },
+              {
+                "time":"251",
+                "end": "253",
+                "datafor":"student=[\"joe\",\"dave\",\"mark\"]\nstudent.append('leo')\nprint (student)",
+                "pause":"true"
+              },
+              {
+                "time":"310",
+                "end":"312",
+                "datafor":"student=[\"joe\",\"dave\",\"mark\"]\nstudent.insert(2,'leo')\nprint (student)",
+                "pause":"true"
+              },
+              {
+                "time":"399",
+                "end":"401",
+                "datafor":"student=[\"joe\",\"dave\",\"mark\"]\ndel student\nprint (student)",
+                "pause":"true"
+              },
+              {
+                "time":"455",
+                "end":"457",
+                "datafor":"alpha=['A','B','C','D','E']\nprint (alpha[1:4])",
+                "pause":"true"
+              },
+              {
+                "time":"496",
+                "end":"498",
+                "datafor":"alpha=['A','B','C','D','E']\nalpha[0:6:2]=['#','#','#']\nprint (alpha)",
+                "pause":"true"
+              },
+              {
+                "time":"543",
+                "end":"545",
+                "datafor":"box_A=box_B=['red','green','blue']\nbox_A[0]='yellow'\nprint (box_B)",
+                "pause":"true"
+
+              },
+              {
+                "time":"608",
+                "end":"610",
+                "datafor":"color_A=['red','green','blue']\ncolor_B=['red','green','blue']\ncolor_A[0]='yellow'\nprint (color_A)\nprint (color_B)",
+                "pause":"true"
+              }
+            ]
+ 
         },
         "7": {
             "name": "2.1 - Control Flow",
