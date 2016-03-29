@@ -203,7 +203,40 @@
         "5": {
             "name": "1.3 - Strings",
             "videoId": "db3C4o__SLw",
-            "timerData": []
+            "timerData": [{
+                "time":"67",
+                "end":"69",
+                "pause":"true",
+                "quiz":{
+                    "question":"Same or Not!\nprint'Awesome Python'\nprint\"Awesome Python\"",
+                    "option":["No","Yes"],
+                    "correct":1}
+                },
+                {"time":"169",
+                 "end":"171",
+                 "pause":"true",
+                 "quiz":{
+                     "question":"what is this?\na='hello'\nprint(a*3)",
+                     "option":["Repetition","Concatenation","Membership"],
+                     "correct":"1",
+                     
+                 }
+                     
+                 },
+                 {"time":"242",
+                  "end":"244",
+                  "pause":"true",
+                  "datafor":"Possible='Impossible'\nprint(Possible[0])\nprint(Possible[1])\nprint(Possible[2:10])"
+                     
+                 },
+                 {
+                    "time":"282",
+                    "end":"284",
+                    "pause":"true",
+                    "datafor":"Name=\"Pranav\"\nCGPA=\"3.2\"\nprint(\"My name is %s and My CGPA are %s.Again fail!\"%(Name,CGPA))
+                 }
+                 
+            }]
         },
         "6": {
             "name": "1.4 - Lists",
