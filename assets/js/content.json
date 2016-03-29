@@ -183,59 +183,52 @@
             "name": "1.2 - Basic Input and Output Operators",
             "videoId": "db3C4o__SLw",
             "timerData": [{
-                "time":"85",
-                "end":"87",
-                "pause":"true",
-                "quiz":{
+                "time": "85",
+                "end": "87",
+                "pause": "true",
+                "quiz": {
                     "question":"What do we use to convert String to an Integer?",
-                    "option":["int()","str()","float()"],
-                    "correct":0
-                },
-                {"time":"182",
-                 "end":"184",
-                 "pause":"false",
-                 "datafor":"#Change favourite team according to you!Mine is laker\nfavouriteteam='Lakers'\nprint(\"my favourite team is\"+favouriteteam)",
-                    
+                    "options":["int()", "str()", "float()"],
+                    "correct": 0
                 }
-            
+            }, {
+                "time": "182",
+                "end": "184",
+                "pause": "true",
+                "datafor": "#Change favourite team according to you!Mine is laker\nfavouriteteam='Lakers'\nprint(\"my favourite team is\"+favouriteteam)"
             }]
         },
         "5": {
             "name": "1.3 - Strings",
-            "videoId": "db3C4o__SLw",
+            "videoId": "74eIuwclMI4",
             "timerData": [{
                 "time":"67",
                 "end":"69",
                 "pause":"true",
                 "quiz":{
-                    "question":"Same or Not!\nprint'Awesome Python'\nprint\"Awesome Python\"",
-                    "option":["No","Yes"],
-                    "correct":1}
-                },
-                {"time":"169",
-                 "end":"171",
-                 "pause":"true",
-                 "quiz":{
-                     "question":"what is this?\na='hello'\nprint(a*3)",
-                     "option":["Repetition","Concatenation","Membership"],
-                     "correct":"1",}
-                     
-                 }
-                     
-                 },
-                 {"time":"242",
-                  "end":"244",
-                  "pause":"true",
-                  "datafor":"Possible='Impossible'\nprint(Possible[0])\nprint(Possible[1])\nprint(Possible[2:10])"
-                     
-                 },
-                 {
-                    "time":"282",
-                    "end":"284",
-                    "pause":"true",
-                    "datafor":"Name=\"Pranav\"\nCGPA=\"3.2\"\nprint(\"My name is %s and My CGPA are %s.Again fail!\"%(Name,CGPA))
-                 }
-                 
+                    "question":"Are these the same?<br>print('Awesome Python')<br>print(\"Awesome Python\")",
+                    "options":["No","Yes"],
+                    "correct":1
+                }
+            }, {
+                "time":"169",
+                "end":"171",
+                "pause":"true",
+                "quiz":{
+                    "question":"what is this?<br>a='hello'<br>print(a*3)",
+                    "options":["Repetition","Concatenation","Membership"],
+                    "correct":"1"
+                }
+            }, {
+                "time":"242",
+                "end":"244",
+                "pause":"true",
+                "datafor":"Possible='Impossible'\nprint(Possible[0])\nprint(Possible[1])\nprint(Possible[2:10])"
+            }, {
+                "time":"282",
+                "end":"284",
+                "pause":"true",
+                "datafor":"Name=\"Pranav\"\nCGPA=\"3.2\"\nprint(\"My name is %s and My CGPA are %s.Again fail!\"%(Name,CGPA))"
             }]
         },
         "6": {
@@ -246,7 +239,7 @@
                 "end": "156",
                 "pause": "true",
                 "quiz": {
-                    "question": "What will be the result of this ?<pre>student_year = [2001, 2012, 2014, 2016, 1997, 1987]\nprint (student_year[5])</pre>",
+                    "question": "What will be the result of this ?<pre>student_year = [2001, 2012, 2014, 2016, 1997, 1987]<br>print (student_year[5])</pre>",
                     "options": ["Error: Index out of bounds", "2001", "1997", "1987"],
                     "correct": 3
                 }
